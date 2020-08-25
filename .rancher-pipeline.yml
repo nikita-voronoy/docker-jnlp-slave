@@ -1,0 +1,10 @@
+stages:
+- name: Deploy
+  steps:
+  - applyAppConfig:
+      catalogTemplate: cattle-global-data:helm3-library-mariadb
+      version: 7.3.14
+      name: mariadb
+      targetNamespace: default
+timeout: 60
+notification: {}
